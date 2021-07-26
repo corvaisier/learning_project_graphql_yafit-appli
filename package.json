@@ -1,9 +1,9 @@
 {
   "name": "ts-project-setup",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.4.3",
     "@typescript-eslint/eslint-plugin": "^4.28.4",
@@ -20,12 +20,15 @@
     "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist build",
-    "ts-node": "ts-node"
+    "ts-node": "ts-node",
+    "start": "yarn build & node dist/tsc/api/app/index.js",
+    "watch": "tsc-watch --onSuccess 'yarn start'"
   },
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "4.17.1",
     "express-graphql": "^0.12.0",
     "graphql": "^15.5.1",
-    "save": "^2.4.0"
+    "save": "^2.4.0",
+    "tsc-watch": "^4.4.0"
   }
 }
