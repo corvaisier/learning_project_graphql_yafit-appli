@@ -1,1 +1,1 @@
-//export * from './simpleMutation';
+export * from './simpleMutation';
