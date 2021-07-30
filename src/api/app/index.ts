@@ -8,5 +8,5 @@ app.use('/graphql', graphqlHTTP({
   schema: schema,
   graphiql: true,
 }));
-app.listen(4000, () => console.log('Express server now running'));
+app.listen(3000, () => console.log('Express server now running'));
 
